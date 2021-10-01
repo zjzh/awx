@@ -17,7 +17,7 @@ function UserDateDetail({ label, date, user }) {
   return (
     <Detail
       label={label}
-      dataCy="date-detail"
+      dataCy="user-date-detail"
       value={
         user ? (
           <Trans>
