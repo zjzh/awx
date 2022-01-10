@@ -43,7 +43,7 @@ function CredentialListItem({
   }, []);
 
   return (
-    <Tr id={`${credential.id}`} ouiaId={`${credential.id}`}>
+    <Tr id={`${credential.id}`}>
       <Td
         select={{
           rowIndex,

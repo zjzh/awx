@@ -104,7 +104,6 @@ function DashboardGraph() {
             selections={periodSelection}
             isOpen={isPeriodDropdownOpen}
             noResultsFoundText={t`No results found`}
-            ouiaId="dashboard-period-select"
           >
             <SelectOption key="month" value="month">
               {t`Past month`}
@@ -131,7 +130,6 @@ function DashboardGraph() {
             }}
             selections={jobTypeSelection}
             isOpen={isJobTypeDropdownOpen}
-            ouiaId="dashboard-job-type-select"
           >
             <SelectOption key="all" value="all">
               {t`All job types`}

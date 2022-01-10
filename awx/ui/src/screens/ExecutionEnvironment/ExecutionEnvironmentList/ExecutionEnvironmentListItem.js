@@ -43,10 +43,7 @@ function ExecutionEnvironmentListItem({
   }, []);
 
   return (
-    <Tr
-      id={`ee-row-${executionEnvironment.id}`}
-      ouiaId={`ee-row-${executionEnvironment.id}`}
-    >
+    <Tr id={`ee-row-${executionEnvironment.id}`}>
       <Td
         select={{
           rowIndex,

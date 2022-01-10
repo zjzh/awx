@@ -26,7 +26,6 @@ function CheckboxCard(props) {
         onChange={onSelect}
         aria-label={name}
         id={`checkbox-card-${itemId}`}
-        ouiaId={`checkbox-card-${itemId}`}
         label={
           <>
             <div style={{ fontWeight: 'bold' }}>{name}</div>

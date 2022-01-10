@@ -100,7 +100,6 @@ function LabelSelect({ value, placeholder, onChange, onError, createText }) {
       placeholderText={placeholder}
       createText={createText}
       noResultsFoundText={t`No results found`}
-      ouiaId="template-label-select"
     >
       {renderOptions(options)}
     </Select>

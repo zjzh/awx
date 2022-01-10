@@ -115,7 +115,6 @@ function JobListCancelButton({ jobsToCancel, onCancel }) {
           component="button"
           aria-labelledby="jobs-list-cancel-button"
           onClick={toggleModal}
-          ouiaId="cancel-job-dropdown-item"
         >
           {cancelJobText}
         </DropdownItem>

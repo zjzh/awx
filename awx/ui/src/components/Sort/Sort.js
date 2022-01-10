@@ -92,11 +92,7 @@ function Sort({ columns, qsConfig, onSort }) {
   const sortDropdownItems = columns
     .filter(({ key }) => key !== sortKey)
     .map(({ key, name }) => (
-      <DropdownItem
-        key={key}
-        component="button"
-        ouiaId={`${name}-dropdown-item`}
-      >
+      <DropdownItem key={key} component="button">
         {name}
       </DropdownItem>
     ));
@@ -119,13 +115,8 @@ function Sort({ columns, qsConfig, onSort }) {
               onSelect={handleDropdownSelect}
               direction={up}
               isOpen={isSortDropdownOpen}
-              ouiaId="sort-dropdown"
               toggle={
-                <DropdownToggle
-                  id="awx-sort"
-                  onToggle={handleDropdownToggle}
-                  ouiaId="sort-dropdown-toggle"
-                >
+                <DropdownToggle id="awx-sort" onToggle={handleDropdownToggle}>
                   {sortedColumnName}
                 </DropdownToggle>
               }
@@ -137,7 +128,6 @@ function Sort({ columns, qsConfig, onSort }) {
             variant={ButtonVariant.control}
             aria-label={t`Sort`}
             onClick={handleSort}
-            ouiaId="sort-button"
           >
             <SortIcon />
           </Button>

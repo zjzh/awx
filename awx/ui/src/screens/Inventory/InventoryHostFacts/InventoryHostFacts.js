@@ -40,7 +40,6 @@ function InventoryHostFacts({ host }) {
           rows="auto"
           value={result}
           name="facts"
-          dataCy="inventory-host-facts-detail"
         />
       </DetailList>
     </CardBody>

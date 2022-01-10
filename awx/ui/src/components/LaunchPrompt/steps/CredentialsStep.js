@@ -127,7 +127,6 @@ function CredentialsStep({
       onClick={() => removeItem(item)}
       isReadOnly={!canDelete}
       credential={item}
-      ouiaId={`credential-chip-${item.id}`}
     />
   );
 

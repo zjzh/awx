@@ -18,7 +18,6 @@ function CheckboxField({
     <Checkbox
       isDisabled={isDisabled}
       aria-label={label}
-      ouiaId={id}
       label={
         <span>
           {label}

@@ -148,7 +148,6 @@ function InventoryRelatedGroupList() {
           key={addExistingGroup}
           onClick={() => setIsModalOpen(true)}
           aria-label={addExistingGroup}
-          ouiaId="add-existing-group-dropdown-item"
         >
           {addExistingGroup}
         </DropdownItem>,

@@ -72,11 +72,7 @@ function InventoryListItem({
   }
 
   return (
-    <Tr
-      id={inventory.id}
-      aria-labelledby={labelId}
-      ouiaId={`inventory-row-${inventory.id}`}
-    >
+    <Tr id={inventory.id} aria-labelledby={labelId}>
       <Td
         select={{
           rowIndex,
@@ -146,7 +142,6 @@ function InventoryListItem({
               onCopyStart={handleCopyStart}
               onCopyFinish={handleCopyFinish}
               errorMessage={t`Failed to copy inventory.`}
-              ouiaId={`${inventory.id}-copy-button`}
             />
           </ActionItem>
         </ActionsTd>

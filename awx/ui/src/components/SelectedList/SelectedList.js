@@ -32,11 +32,7 @@ function SelectedList(props) {
     <Split>
       <SplitLabelItem>{label}</SplitLabelItem>
       <SplitItem>
-        <ChipGroup
-          numChips={5}
-          totalChips={selected.length}
-          ouiaId="selected-list-chips"
-        >
+        <ChipGroup numChips={5} totalChips={selected.length}>
           {selected.map((item) =>
             renderChip({
               item,

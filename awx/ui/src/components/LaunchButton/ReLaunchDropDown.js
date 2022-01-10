@@ -77,7 +77,6 @@ function ReLaunchDropDown({
             aria-label={t`relaunch jobs`}
             id={id}
             isPrimary
-            ouiaId="relaunch-job-toggle"
           >
             {t`Relaunch`}
           </DropdownToggle>
@@ -99,7 +98,6 @@ function ReLaunchDropDown({
           onToggle={onToggle}
           aria-label={t`relaunch jobs`}
           id={id}
-          ouiaId="relaunch-job-toggle"
         >
           <RocketIcon />
         </DropdownToggle>

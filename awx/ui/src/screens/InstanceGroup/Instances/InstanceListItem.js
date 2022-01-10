@@ -110,10 +110,7 @@ function InstanceListItem({
 
   return (
     <>
-      <Tr
-        id={`instance-row-${instance.id}`}
-        ouiaId={`instance-row-${instance.id}`}
-      >
+      <Tr id={`instance-row-${instance.id}`}>
         <Td
           expand={{
             rowIndex,
@@ -189,10 +186,7 @@ function InstanceListItem({
           </ActionItem>
         </ActionsTd>
       </Tr>
-      <Tr
-        ouiaId={`instance-row-${instance.id}-expanded`}
-        isExpanded={isExpanded}
-      >
+      <Tr isExpanded={isExpanded}>
         <Td colSpan={2} />
         <Td colSpan={7}>
           <ExpandableRowContent>

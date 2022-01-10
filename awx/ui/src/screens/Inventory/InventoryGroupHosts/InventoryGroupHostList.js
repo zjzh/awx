@@ -161,7 +161,6 @@ function InventoryGroupHostList() {
           onClick={() => setIsModalOpen(true)}
           key={addExistingHost}
           aria-label={addExistingHost}
-          ouiaId="add-existing-host-dropdown-item"
         >
           {addExistingHost}
         </DropdownItem>,
@@ -170,7 +169,6 @@ function InventoryGroupHostList() {
           to={`${addFormUrl}`}
           key={addNewHost}
           aria-label={addNewHost}
-          ouiaId="add-new-host-dropdown-item"
         >
           {addNewHost}
         </DropdownItem>,

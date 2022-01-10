@@ -23,7 +23,7 @@ const SurveyActionsTd = styled(ActionsTd)`
 
 function SurveyListItem({ canEdit, question, isChecked, onSelect, rowIndex }) {
   return (
-    <Tr ouiaId={`survey-row-${question.variable}`}>
+    <Tr>
       <Td
         data-cy={`${question.variable}-select`}
         select={{
@@ -69,14 +69,9 @@ function SurveyListItem({ canEdit, question, isChecked, onSelect, rowIndex }) {
             <ChipGroup
               numChips={5}
               totalChips={question.default.split('\n').length}
-              ouiaId="multiselect-default-chips"
             >
               {question.default.split('\n').map((chip) => (
-                <Chip
-                  key={chip}
-                  isReadOnly
-                  ouiaId={`multiselect-default-${chip}-chip`}
-                >
+                <Chip key={chip} isReadOnly>
                   {chip}
                 </Chip>
               ))}

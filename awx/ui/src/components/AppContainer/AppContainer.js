@@ -91,11 +91,7 @@ function AppContainer({ navRouteConfig = [], children }) {
     <PageSidebar
       theme="dark"
       nav={
-        <Nav
-          aria-label={t`Navigation`}
-          theme="dark"
-          ouiaId="sidebar-navigation"
-        >
+        <Nav aria-label={t`Navigation`} theme="dark">
           <NavList>
             {navRouteConfig.map(({ groupId, groupTitle, routes }) => (
               <NavExpandableGroup

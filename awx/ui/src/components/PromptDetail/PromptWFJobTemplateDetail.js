@@ -116,7 +116,6 @@ function PromptWFJobTemplateDetail({ resource }) {
             <ChipGroup
               numChips={5}
               totalChips={summary_fields.labels.results.length}
-              ouiaId="prompt-wf-jt-label-chips"
             >
               {summary_fields.labels.results.map((label) => (
                 <Chip key={label.id} isReadOnly>
@@ -133,7 +132,6 @@ function PromptWFJobTemplateDetail({ resource }) {
           rows={4}
           value={extra_vars}
           name="extra_vars"
-          dataCy="prompt-wf-jt-detail-variables"
         />
       )}
     </>

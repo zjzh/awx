@@ -80,7 +80,6 @@ function DataListToolbar({
   return (
     <Toolbar
       id={`${qsConfig.namespace}-list-toolbar`}
-      ouiaId={`${qsConfig.namespace}-list-toolbar`}
       clearAllFilters={clearAllFilters}
       collapseListedFiltersBreakpoint="lg"
       clearFiltersButtonText={Boolean(search) && t`Clear all filters`}
@@ -114,7 +113,6 @@ function DataListToolbar({
                 onChange={onSelectAll}
                 aria-label={t`Select all`}
                 id="select-all"
-                ouiaId="select-all"
               />
             </ToolbarItem>
           </ToolbarGroup>
@@ -179,7 +177,6 @@ function DataListToolbar({
                 position={dropdownPosition}
                 isPlain
                 dropdownItems={additionalControls}
-                ouiaId="actions-dropdown"
               />
             </KebabifiedProvider>
           </ToolbarItem>

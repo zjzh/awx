@@ -59,10 +59,9 @@ function ManagementJobListItem({
     }
   };
 
-  const rowId = `mgmt-jobs-row-${jobType ? jobType.replace('_', '-') : ''}`;
   return (
     <>
-      <Tr id={rowId} ouiaId={rowId}>
+      <Tr id={`mgmt-jobs-row-${jobType ? jobType.replace('_', '-') : ''}`}>
         <Td />
         <Td dataLabel={t`Name`}>
           <Link to={`${detailsUrl}`}>

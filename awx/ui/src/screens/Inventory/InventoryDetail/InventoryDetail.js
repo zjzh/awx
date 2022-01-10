@@ -83,17 +83,9 @@ function InventoryDetail({ inventory }) {
             fullWidth
             label={t`Instance Groups`}
             value={
-              <ChipGroup
-                numChips={5}
-                totalChips={instanceGroups.length}
-                ouiaId="instance-group-chips"
-              >
+              <ChipGroup numChips={5} totalChips={instanceGroups.length}>
                 {instanceGroups.map((ig) => (
-                  <Chip
-                    key={ig.id}
-                    isReadOnly
-                    ouiaId={`instance-group-${ig.id}-chip`}
-                  >
+                  <Chip key={ig.id} isReadOnly>
                     {ig.name}
                   </Chip>
                 ))}
@@ -106,7 +98,6 @@ function InventoryDetail({ inventory }) {
           value={inventory.variables}
           rows={4}
           name="variables"
-          dataCy="inventory-detail-variables"
         />
         <UserDateDetail
           label={t`Created`}

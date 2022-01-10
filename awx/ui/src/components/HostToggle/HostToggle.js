@@ -66,7 +66,6 @@ function HostToggle({
             !host.summary_fields.user_capabilities.edit
           }
           onChange={toggleHost}
-          ouiaId={`host-${host.id}-toggle`}
           aria-label={t`Toggle host`}
         />
       </Tooltip>

@@ -131,7 +131,6 @@ function VariablesField({
       <Modal
         variant="xlarge"
         title={label}
-        ouiaId={`${id}-modal`}
         isOpen={isExpanded}
         onClose={() => setIsExpanded(false)}
         actions={[
@@ -215,7 +214,7 @@ function VariablesFieldInternals({
 
   return (
     <div className="pf-c-form__group">
-      <FieldHeader data-cy={`${id}-label`}>
+      <FieldHeader>
         <Split hasGutter>
           <SplitItem>
             <label htmlFor={id} className="pf-c-form__label">
@@ -247,7 +246,7 @@ function VariablesFieldInternals({
             variant="plain"
             aria-label={t`Expand input`}
             onClick={onExpand}
-            ouiaId={`${id}-expand`}
+            ouiaId={`${id}-variables-expand`}
           >
             <ExpandArrowsAltIcon />
           </Button>

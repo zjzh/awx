@@ -255,7 +255,6 @@ function InventorySourceDetail({ inventorySource }) {
             rows={4}
             value={source_vars}
             name="source_vars"
-            dataCy="inventory-source-detail-variables"
           />
         )}
         <UserDateDetail date={created} label={t`Created`} user={created_by} />

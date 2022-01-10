@@ -5,10 +5,7 @@ import { Tr, Td } from '@patternfly/react-table';
 
 function ExecutionEnvironmentTemplateListItem({ template, detailUrl }) {
   return (
-    <Tr
-      id={`template-row-${template.id}`}
-      ouiaId={`template-row-${template.id}`}
-    >
+    <Tr id={`template-row-${template.id}`}>
       <Td dataLabel={t`Name`}>
         <Link to={`${detailUrl}`}>{template.name}</Link>
       </Td>

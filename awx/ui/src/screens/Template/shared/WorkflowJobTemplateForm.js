@@ -229,7 +229,6 @@ function WorkflowJobTemplateForm({
               </span>
             }
             id="wfjt-enabled-webhooks"
-            ouiaId="wfjt-enabled-webhooks"
             isChecked={enableWebhooks}
             onChange={(checked) => {
               setEnableWebhooks(checked);

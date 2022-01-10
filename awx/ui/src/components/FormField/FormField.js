@@ -26,7 +26,6 @@ function FormField(props) {
       {(type === 'textarea' && (
         <FormGroup
           fieldId={id}
-          data-cy={`${id}-form-group`}
           helperText={helperText}
           helperTextInvalid={meta.error}
           isRequired={isRequired}
@@ -49,7 +48,6 @@ function FormField(props) {
       )) || (
         <FormGroup
           fieldId={id}
-          data-cy={`${id}-form-group`}
           helperText={helperText}
           helperTextInvalid={meta.error}
           isRequired={isRequired}

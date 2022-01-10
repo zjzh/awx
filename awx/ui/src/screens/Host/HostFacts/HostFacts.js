@@ -46,7 +46,6 @@ function HostFacts({ host }) {
           rows="auto"
           value={facts}
           name="facts"
-          dataCy="host-facts-detail"
         />
       </DetailList>
     </CardBody>

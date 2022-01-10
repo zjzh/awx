@@ -97,10 +97,7 @@ function NotificationTemplateListItem({
 
   return (
     <>
-      <Tr
-        id={`notification-template-row-${template.id}`}
-        ouiaId={`notification-template-row-${template.id}`}
-      >
+      <Tr id={`notification-template-row-${template.id}`}>
         <Td
           select={{
             rowIndex,

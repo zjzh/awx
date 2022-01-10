@@ -33,7 +33,7 @@ const ScreenHeader = ({ breadcrumbConfig, streamType }) => {
       >
         <div>
           {!isOnlyOneCrumb && (
-            <Breadcrumb ouiaId="breadcrumb-list">
+            <Breadcrumb>
               <Route path="/:path">
                 <Crumb breadcrumbConfig={breadcrumbConfig} />
               </Route>
@@ -103,7 +103,7 @@ const Crumb = ({ breadcrumbConfig, showDivider }) => {
   const crumb = breadcrumbConfig[match.url];
 
   let crumbElement = (
-    <BreadcrumbItem key={match.url} showDivider={showDivider} data-cy={crumb}>
+    <BreadcrumbItem key={match.url} showDivider={showDivider}>
       <Link to={match.url}>{crumb}</Link>
     </BreadcrumbItem>
   );
@@ -119,11 +119,7 @@ const Crumb = ({ breadcrumbConfig, showDivider }) => {
     <>
       {crumbElement}
       <Route path={`${match.url}/:path`}>
-        <Crumb
-          breadcrumbConfig={breadcrumbConfig}
-          showDivider
-          data-cy={crumb}
-        />
+        <Crumb breadcrumbConfig={breadcrumbConfig} showDivider />
       </Route>
     </>
   );

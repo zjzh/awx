@@ -64,10 +64,7 @@ function ScheduleListItem({
   const isDisabled = Boolean(isMissingInventory || isMissingSurvey);
 
   return (
-    <Tr
-      id={`schedule-row-${schedule.id}`}
-      ouiaId={`schedule-row-${schedule.id}`}
-    >
+    <Tr id={`schedule-row-${schedule.id}`}>
       <Td
         select={{
           rowIndex,

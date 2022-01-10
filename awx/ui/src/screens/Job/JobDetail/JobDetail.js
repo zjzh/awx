@@ -315,16 +315,11 @@ function JobDetail({ job, inventorySourceLabels }) {
             dataCy="job-machine-credential"
             label={t`Machine Credential`}
             value={
-              <ChipGroup
-                numChips={5}
-                totalChips={1}
-                ouiaId="job-machine-credential-chips"
-              >
+              <ChipGroup numChips={5} totalChips={1}>
                 <CredentialChip
                   key={credential.id}
                   credential={credential}
                   isReadOnly
-                  ouiaId={`job-machine-credential-${credential.id}-chip`}
                 />
               </ChipGroup>
             }
@@ -336,18 +331,9 @@ function JobDetail({ job, inventorySourceLabels }) {
             fullWidth
             label={t`Credentials`}
             value={
-              <ChipGroup
-                numChips={5}
-                totalChips={credentials.length}
-                ouiaId="job-credential-chips"
-              >
+              <ChipGroup numChips={5} totalChips={credentials.length}>
                 {credentials.map((c) => (
-                  <CredentialChip
-                    key={c.id}
-                    credential={c}
-                    isReadOnly
-                    ouiaId={`job-credential-${c.id}-chip`}
-                  />
+                  <CredentialChip key={c.id} credential={c} isReadOnly />
                 ))}
               </ChipGroup>
             }
@@ -359,13 +345,9 @@ function JobDetail({ job, inventorySourceLabels }) {
             fullWidth
             label={t`Labels`}
             value={
-              <ChipGroup
-                numChips={5}
-                totalChips={labels.results.length}
-                ouiaId="job-label-chips"
-              >
+              <ChipGroup numChips={5} totalChips={labels.results.length}>
                 {labels.results.map((l) => (
-                  <Chip key={l.id} isReadOnly ouiaId={`job-label-${l.id}-chip`}>
+                  <Chip key={l.id} isReadOnly>
                     {l.name}
                   </Chip>
                 ))}
@@ -382,14 +364,9 @@ function JobDetail({ job, inventorySourceLabels }) {
               <ChipGroup
                 numChips={5}
                 totalChips={job.job_tags.split(',').length}
-                ouiaId="job-tag-chips"
               >
                 {job.job_tags.split(',').map((jobTag) => (
-                  <Chip
-                    key={jobTag}
-                    isReadOnly
-                    ouiaId={`job-tag-${jobTag}-chip`}
-                  >
+                  <Chip key={jobTag} isReadOnly>
                     {jobTag}
                   </Chip>
                 ))}
@@ -406,14 +383,9 @@ function JobDetail({ job, inventorySourceLabels }) {
               <ChipGroup
                 numChips={5}
                 totalChips={job.skip_tags.split(',').length}
-                ouiaId="job-skip-tag-chips"
               >
                 {job.skip_tags.split(',').map((skipTag) => (
-                  <Chip
-                    key={skipTag}
-                    isReadOnly
-                    ouiaId={`job-skip-tag-${skipTag}-chip`}
-                  >
+                  <Chip key={skipTag} isReadOnly>
                     {skipTag}
                   </Chip>
                 ))}
@@ -446,7 +418,6 @@ function JobDetail({ job, inventorySourceLabels }) {
             rows={4}
             label={t`Variables`}
             name="extra_vars"
-            dataCy="job-detail-extra-variables"
           />
         )}
         {job.artifacts && (
@@ -458,7 +429,6 @@ function JobDetail({ job, inventorySourceLabels }) {
             rows={4}
             label={t`Artifacts`}
             name="artifacts"
-            dataCy="job-detail-artifacts"
           />
         )}
       </DetailList>

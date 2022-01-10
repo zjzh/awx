@@ -23,11 +23,7 @@ function InventoryRelatedGroupListItem({
   const labelId = `check-action-${group.id}`;
 
   return (
-    <Tr
-      id={group.id}
-      ouiaId={`group-row-${group.id}`}
-      aria-labelledby={labelId}
-    >
+    <Tr id={group.id} aria-labelledby={labelId}>
       <Td
         select={{
           rowIndex,

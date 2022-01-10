@@ -90,7 +90,6 @@ function InventoryHostDetail({ host }) {
           rows={4}
           value={variables}
           name="variables"
-          dataCy="inventory-host-detail-variables"
         />
       </DetailList>
       <CardActionsRow>

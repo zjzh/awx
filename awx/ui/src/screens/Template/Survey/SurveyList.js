@@ -97,7 +97,7 @@ function SurveyList({
       <>
         <TableComposable ouiaId="survey-list">
           <Thead>
-            <Tr ouiaId="survey-table-header">
+            <Tr>
               <Th />
               <Th dataLabel={t`Name`}>{t`Name`}</Th>
               <Th dataLabel={t`Type`}>{t`Type`}</Th>

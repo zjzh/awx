@@ -55,7 +55,6 @@ function SmartInventoryHostDetail({ host }) {
           rows={4}
           value={variables}
           name="variables"
-          dataCy="smart-inventory-host-detail-variables"
         />
       </DetailList>
     </CardBody>

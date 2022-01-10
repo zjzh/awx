@@ -29,11 +29,7 @@ function RoutedTabs({ tabsArray }) {
   }
 
   return (
-    <Tabs
-      activeKey={getActiveTabId()}
-      onSelect={handleTabSelect}
-      ouiaId="routed-tabs"
-    >
+    <Tabs activeKey={getActiveTabId()} onSelect={handleTabSelect}>
       {tabsArray.map((tab) => (
         <Tab
           aria-label={typeof tab.name === 'string' ? tab.name : null}
@@ -42,7 +38,6 @@ function RoutedTabs({ tabsArray }) {
           link={tab.link}
           title={<TabTitleText>{tab.name}</TabTitleText>}
           aria-controls=""
-          ouiaId={`${tab.name}-tab`}
         />
       ))}
     </Tabs>

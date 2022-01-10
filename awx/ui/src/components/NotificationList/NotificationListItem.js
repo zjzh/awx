@@ -21,10 +21,7 @@ function NotificationListItem({
   showApprovalsToggle,
 }) {
   return (
-    <Tr
-      id={`notification-row-${notification.id}`}
-      ouiaId={`notification-row-${notification.id}`}
-    >
+    <Tr id={`notification-row-${notification.id}`}>
       <Td id={`notification-${notification.id}`} dataLabel={t`Name`}>
         <Link to={`${detailUrl}`}>
           <b>{notification.name}</b>
@@ -35,7 +32,6 @@ function NotificationListItem({
         <ActionItem visible={showApprovalsToggle}>
           <Switch
             id={`notification-${notification.id}-approvals-toggle`}
-            ouiaId={`notification-${notification.id}-approvals-toggle`}
             label={t`Approval`}
             labelOff={t`Approval`}
             isChecked={approvalsTurnedOn}
@@ -53,7 +49,6 @@ function NotificationListItem({
         <ActionItem visible>
           <Switch
             id={`notification-${notification.id}-started-toggle`}
-            ouiaId={`notification-${notification.id}-started-toggle`}
             label={t`Start`}
             labelOff={t`Start`}
             isChecked={startedTurnedOn}
@@ -67,7 +62,6 @@ function NotificationListItem({
         <ActionItem visible>
           <Switch
             id={`notification-${notification.id}-success-toggle`}
-            ouiaId={`notification-${notification.id}-success-toggle`}
             label={t`Success`}
             labelOff={t`Success`}
             isChecked={successTurnedOn}
@@ -81,7 +75,6 @@ function NotificationListItem({
         <ActionItem visible>
           <Switch
             id={`notification-${notification.id}-error-toggle`}
-            ouiaId={`notification-${notification.id}-error-toggle`}
             label={t`Failure`}
             labelOff={t`Failure`}
             isChecked={errorTurnedOn}
