@@ -262,7 +262,14 @@ register(
     field_class=fields.StringListField,
     required=False,
     label=_('Paths to expose to isolated jobs'),
-    help_text=_('List of paths that would otherwise be hidden to expose to isolated jobs. Enter one path per line.'),
+    help_text=_(
+        'List of paths that would otherwise be hidden to expose to isolated jobs. Enter one path per line. \n'
+        'The supported format is [SOURCE-VOLUME|HOST-DIR:]CONTAINER-DIR[:OPTIONS]]. \n'
+        'Supported options are: z and O. Please refer to podman documentation for further details. \n'
+        '/etc/pki:/etc/pki:O \n'
+        '/shared_volume:/data:z \n'
+        '/data \n'
+    ),
     category=_('Jobs'),
     category_slug='jobs',
 )
